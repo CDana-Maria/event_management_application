@@ -1,1 +1,1 @@
-# blog_database
+# created database for blog with migrations
