@@ -23,9 +23,9 @@ article+article {
 
 <body>
 <article>
-<?=$post;?>
+<?=$article;?>
 </p>
 </article>
 
-<a href="/blog">Go back</a>
+<a href="/articles">Go back</a>
 </body>
