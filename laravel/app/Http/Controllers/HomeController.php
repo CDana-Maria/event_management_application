@@ -8,9 +8,10 @@ use App\Models\Article;
 class HomeController extends Controller
 {
     public function show() {
-        $article= Article::orderBy('published_at', 'desc');
+        $article= Article::whereNotNull('modified_at')->OrderBy('created_at', 'desc')->get();
         return view('home', ['articles' => $article]);
     }
+    
 
     
 }
