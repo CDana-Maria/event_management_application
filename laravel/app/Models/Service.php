@@ -19,12 +19,18 @@ class Service extends Model
         'created_at'
     ];
 
-    public function sponsor(){
-        return $this->belongsTo(Sponsor::class);
-    }
 
+    /**
+     * The services that belong to the sponsors.
+     */
+    public function sponsor(){
+        return $this->belongsTo(Sponsor::class, 'sponsor_id');
+    }
+/**
+     * The services that belong to the organizator.
+     */
     public function organizator(){
-        return $this->belongsToMany(Organizator::class);
+        return $this->belongsToMany(Organizator::class, ServiceOrganizator::class, 'service_id', 'id');
     }
 
 }

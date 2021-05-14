@@ -15,8 +15,10 @@ class Tag extends Model
         'id',
         'name'
     ];
-
+/**
+     * The tag that belong to the article.
+     */
     public function article() {
-        return $this->belongsToMany(Article::class);
+        return $this->belongsToMany(Article::class, ArticleTag::class, 'tag_id', 'id');
     }
 }

@@ -37,7 +37,7 @@ section {
       <div class="row">
         <div class="col">
           <h2 class="about-title featured-text text-center">Message us!</h2>
-          <form action= "{{ route('contact.send') }}" method="post" >
+          <form action= "\contact" method="post" >
                 @csrf
             <div class="row">
               <div class="col-lg-6 col-md-6 col-sm-6" style="padding-bottom: 10px;">

@@ -20,8 +20,11 @@ class Contact extends Model
         'created_at'
     ];
 
+     /**
+     * Get the organizator that owns the contact.
+     */
     public function organizator(){
-        return $this->belongsTo(Organizator::class);
+        return $this->belongsTo(Organizator::class, 'contact_id', 'id');
     }
 
 }

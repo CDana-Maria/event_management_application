@@ -6,14 +6,14 @@
   <meta name="description" content="@yield('seoDescription', 'Blog and Blog')">
   <meta name="author" content="Dana-Maria Cozaru">
   <title>@yield('seoTitle', 'My Project')</title>
-  <link href="{{ asset ('/css/app.css') }}" rel="stylesheet">
+  <link href="{{ URL::asset('/css/appp.css') }}" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
   <!-- <link rel="stylesheet" href="{{ asset ('/node_modules/bootstrap/dist/css/bootstrap.css') }}"> -->
   @yield('headerScripts')
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
   <style>
-    /* section {
+        /* section {
       padding: 200px 200px;
       display: block;
     } */
@@ -21,31 +21,27 @@
     .card-footer {
       background: #3e6866;
     }
-
     .blog .row .post a {
       font-size: 0.9rem;
       color: #3e6866;
       font-weight: bold;
     }
-
     .blog .row .sidebar .row .sidetext h4 {
       font-size: 1rem;
     }
-
     .blog .row .sidebar .row .sidetext a {
       color: #3e6866;
       font-size: 0.8rem;
     }
-
     /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
     @media screen and (max-width: 800px) {
-
       .leftcolumn,
       .rightcolumn {
         width: 100%;
         padding: 0;
       }
     }
+   
   </style>
 </head>
 <body>

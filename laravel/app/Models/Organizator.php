@@ -16,12 +16,19 @@ class Organizator extends Model
         'name'
     ];
 
+    /**
+     * Get the contact associated with the organizator.
+     */
     public function contact(){
-        return $this->hasOne(Contact::class);
+        return $this->hasOne(Contact::class, 'contact_id');
     }
 
+    /**
+     * The organizator that belong to the service.
+     */
+
     public function service(){
-        return $this->belongsToMany(Service::class);
+        return $this->belongsToMany(Service::class, ServiceOrganizator::class, 'organizator_id', 'id');
     }
 
 }

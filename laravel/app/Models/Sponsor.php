@@ -18,8 +18,11 @@ class Sponsor extends Model
         'email'
     ];
 
+    /**
+     * Assign sponsor to service.
+     */
     public function service(){
-        return $this->hasMany(Service::class);
+        return $this->hasMany(Service::class, 'sponsor_id', 'id');
     }
 
 }

@@ -17,4 +17,22 @@ class ServiceOrganizator extends Model
         'organizator_id'
     ];
 
+
+    /**
+     * Assign serviceOrganizator to services.
+     */
+    public function services()
+    {
+        return $this->hasMany(Service::class, 'service_id');
+    }
+
+    /**
+     * Assign serviceOrganizator to organizators.
+     */
+
+    public function organizators()
+    {
+        return $this->hasMany(Organizator::class, 'organizator_id');
+    }
+
 }

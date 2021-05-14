@@ -32,10 +32,18 @@ Route::get('/services/price', [ServByPriceController::class, 'index']);
 Route::get('/services/{id}', [SingleServiceController::class, 'index']);
 Route::get('/blog', [HomeController::class, 'index']);
 Route::get('/contact', [ContactController::class, 'index']);
-Route::post('/contact', [ContactController::class, 'contact'])->name('contact.send');
+// Route::post('/contact', [ContactController::class, 'contact'])->name('contact.send');
 Route::get('/article/{id}',[ArticleController::class, 'index']);
 Route::get('/tag/{id}', [TagController::class, 'index']);
 Route::get('category/{id}', [CategoryController::class, 'index']);
+
+Route::post('/contact', \App\Http\Controllers\ContactFormController::class);
+
+
+
+// Route::get('/mailContactUs', function () {
+//     return view('contactUs');});
+
 
 Route::get('/about', function () {
     return view('pages.about');});
