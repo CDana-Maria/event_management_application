@@ -13,4 +13,8 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
+    // .css('resources/css/appp.css', 'public/css/myproject')
+    // .copy('node_modules', 'public/node_modules')
+    // .copy('resources/images', 'public/images')
+    // .copy('node_modules/font-awesome', 'public/node_modules')
     .sourceMaps();

@@ -14,5 +14,5 @@
 
   Message: {{ $content}}
 
-</div>  </body>
+</body>
 </html>

@@ -27,7 +27,7 @@ Tag Page
           <a href="/article/{{ $article->id }}">Read more</a>
           <small class="text-muted float-right">3 mins</small>
           <div>
-            <small class="text-muted float-left"> Tag: <a href="/tag/{{ $tags->id }}">{{ $tags->name}}</small>
+            <small class="text-muted float-left"> Tag: <a href="/tag/{{ $tags->id }}">{{ $tags->name}}</a></small>
           </div>
         </div>
         @endif

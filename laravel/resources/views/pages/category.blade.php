@@ -15,7 +15,6 @@
   <div class="col-12">
     <div class="row">
       @foreach ($articles as $article )
-      @foreach ($article->tag as $tag )
       <div class="post1 col-4">
         <img class="img-fluid pb-3" src="../images/prod_9.webp" alt="article1">
         <h3>{{ $article->title }}</h3>
@@ -23,11 +22,9 @@
         <a href="/article/{{ $article->id }}">Read more</a>
         <small class="text-muted float-right">3 mins</small>
         <div>
-          <small class="text-muted float-left"> Tag: <a href="/tag/{{ $tag->id }}">{{ $tag->name}}</small>
         </div>
-        <!-- <a href="{{ $article->path }}">Read more</a> -->
       </div>
-      @endforeach @endforeach
+      @endforeach
     </div>
   </div>
   </div>

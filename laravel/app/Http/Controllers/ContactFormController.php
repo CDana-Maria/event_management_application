@@ -23,11 +23,11 @@ class ContactFormController  extends Controller
             'name'=>$request->input('name'),
             'email'=>$request->input('email'),
             'subject'=>$request->input('subject'),
-            'content'=>$request->input('comment') 
+            'content'=>$request->input('content') 
             ],
 
          function(Message $message) use ($request){
-            $message->to('test@test.ts');
+            $message->to('dana@maria.dm');
             $message->subject($request->input('subject'));
         }); 
         return redirect('/contact');

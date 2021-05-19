@@ -9,7 +9,7 @@ class ServiceOrganizator extends Model
 {
     use HasFactory;
 
-    protected $table = 'events_and_organizators';
+    protected $table = 'organizator_service';
 
     protected $fillable = [
         'id',

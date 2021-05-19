@@ -55,7 +55,7 @@ section {
             <div class="row">
               <div class="col-lg-12 col-md-12 col-sm-12">
                 <textarea style="resize:vertical; padding-bottom: 10px;" class="form-control" placeholder="Message..."
-                  rows="6" name="comment" required>
+                  rows="6" name="content" required>
                     </textarea>
               </div>
             </div>
