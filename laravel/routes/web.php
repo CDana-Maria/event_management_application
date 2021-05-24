@@ -12,6 +12,8 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ServByDateController;
 use App\Http\Controllers\ServByPriceController;
 use App\Http\Controllers\SingleServiceController;
+use App\Http\Middleware\RequestLoggerMiddleware;
+use App\Services\AbstractRequestLogger;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,7 +33,10 @@ Route::get('/services/date', [ServByDateController::class, 'index']);
 Route::get('/services/price', [ServByPriceController::class, 'index']);
 Route::get('/services/{id}', [SingleServiceController::class, 'index']);
 Route::get('/blog', [HomeController::class, 'index']);
-Route::get('/contact', [ContactController::class, 'index']);
+Route::get('/contact', ['uses'=> function()
+{
+    return view('pages.contact');
+}, 'middleware' => RequestLoggerMiddleware::class]);
 // Route::post('/contact', [ContactController::class, 'contact'])->name('contact.send');
 Route::get('/article/{id}',[ArticleController::class, 'index']);
 Route::get('/tag/{id}', [TagController::class, 'index']);
