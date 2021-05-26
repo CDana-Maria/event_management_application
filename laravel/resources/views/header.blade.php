@@ -2,7 +2,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark  navbar-custom">
       <div class="container ">
         <a class="navbar-brand" href="#">
-          <img src="images/logo_1.png" class="logo" alt="logo">
+          <img src="../images/logo_1.png" class="logo" alt="logo">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,7 +23,7 @@
                   <a class="dropdown-item" href="#popular">Popular</a>
                   <a class="dropdown-item" href="#recent">Recent</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="pages/products_all.html">All products</a>
+                  <a class="dropdown-item" href="{!! url('/services/all'); !!}">All products</a>
                 </div>
               </li>
               <li class="nav-item effect">
