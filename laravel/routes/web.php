@@ -32,15 +32,15 @@ Route::get('/services/all', [AllServicesController::class, 'index']);
 Route::get('/services/date', [ServByDateController::class, 'index']);
 Route::get('/services/price', [ServByPriceController::class, 'index']);
 Route::get('/services/{id}', [SingleServiceController::class, 'index']);
-Route::get('/blog', [HomeController::class, 'index']);
+Route::get('/articles', [HomeController::class, 'index']);
 Route::get('/contact', ['uses'=> function()
 {
     return view('pages.contact');
 }, 'middleware' => RequestLoggerMiddleware::class]);
 // Route::post('/contact', [ContactController::class, 'contact'])->name('contact.send');
-Route::get('/article/{id}',[ArticleController::class, 'index']);
-Route::get('/tag/{id}', [TagController::class, 'index']);
-Route::get('category/{id}', [CategoryController::class, 'index']);
+Route::get('/articles/{id}',[ArticleController::class, 'index']);
+Route::get('/tags/{id}', [TagController::class, 'index']);
+Route::get('categories/{id}', [CategoryController::class, 'index']);
 
 Route::post('/contact', \App\Http\Controllers\ContactFormController::class);
 

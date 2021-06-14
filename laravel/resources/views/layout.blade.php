@@ -55,24 +55,11 @@
   <script>
     $(document).ready(function() {
       $('.customer-logos').slick({
-        slidesToShow: 6,
-        slidesToScroll: 1,
+        slidesToShow: 5,
+        slidesToScroll: 2,
         autoplay: true,
-        autoplaySpeed: 1500,
-        arrows: false,
-        dots: false,
-        pauseOnHover: false,
-        responsive: [{
-          breakpoint: 768,
-          setting: {
-            slidesToShow: 4
-          }
-        }, {
-          breakpoint: 520,
-          setting: {
-            slidesToShow: 3
-          }
-        }]
+        arrows: true,
+        pauseOnHover: true,
       });
     });
   </script>
