@@ -55,7 +55,7 @@ Single Service
         <h5>Organizator: {{ $org->name }}</h5>
 
         <div class="card-footer text-muted ">
-          <a href="#" class="btn btn-success">Order</a>  
+          <a href="#" class="btn btn-success add-cart cart1">Order</a>  
           <a href="/services/all" class="btn btn-success align-items-right">Go Back</a>
         </div>
       </div>

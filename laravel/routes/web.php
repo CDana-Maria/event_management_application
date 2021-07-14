@@ -49,6 +49,9 @@ Route::post('/contact', \App\Http\Controllers\ContactFormController::class);
 // Route::get('/mailContactUs', function () {
 //     return view('contactUs');});
 
+Route::get('/cart', function() {
+    return view('pages.cart');
+});
 
 Route::get('/about', function () {
     return view('pages.about');});

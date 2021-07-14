@@ -1,41 +1,27 @@
 version: "3"
 services:
-  project-db:
+  mb_projects_laravel:
     image: mariadb:10.1.48-bionic
-    container_name: project-dbs
+    container_name: mb_projects_laravel
     volumes:
       - "/home/dana-maria/bootcampDev/www/event_management/laravel/docker-containers/db:/var/www/html"
     ports:
-      - "3387:3306"
+      - "33102:3306"
     environment:
       - MYSQL_ROOT_PASSWORD=test
     networks:
       - project-network
     restart: unless-stopped
 
-  project-webserver:
-    image: nginx:alpine
-    container_name: project-webserver
-    restart: unless-stopped
-    tty: true
-    ports:
-      - "885:80"
-      - "8843:443"
-    volumes:
-      - "/home/dana-maria/bootcampDev/www/event_management/laravel:/var/www/html"
-      - "/home/containers/project/docker-compose/nginx/conf.d/:/etc/nginx/conf.d/"
-    networks:
-      - project-network
-
-  project-app:
-    image: amoraresco/it-academy-project:1.2
-    container_name: project-apps
+  it-academy-project_laravel:
+    image: amoraresco/it-academy-project:latest
+    container_name: it-academy-project_laravel
     links:
-      - project-db
+      - mb_projects_laravel
       - project-redis
     ports:
-      - "9000:9000"
-      - "883:22"
+      - "89:80"
+      - "8823:22"
     working_dir: /var/www/html
     volumes:
       - "/home/dana-maria/bootcampDev/www/event_management/laravel:/var/www/html"
@@ -49,14 +35,24 @@ services:
       - MAIL_FROM_ADDRESS=danamaria.cozaru@gmail.com
       - MAIL_NAME="PHR API"
       - MAIL_DELAY=2500
-      - DB_HOST=project-db
+      - DB_HOST=mb_projects_laravel
       - DB_DATABASE=laravel
       - DB_USERNAME=root
-      - DB_PASSWORD=root
+      - DB_PASSWORD=test
       - DB_PORT=3306
     networks:
       - project-network
     restart: unless-stopped
+
+# /*
+#     sudo docker run --name it-academy-project_laravel -d \
+#     -p 89:80 \
+#     -p 8823:22 \
+#     --restart unless-stopped \
+#     --volume /home/dana-maria/bootcampDev/www/event_management/laravel:/var/www/html \
+#    --network=laravel_network \
+#     amoraresco/it-academy-project:latest \
+# */
 
   project-mailhog:
     image: mailhog/mailhog

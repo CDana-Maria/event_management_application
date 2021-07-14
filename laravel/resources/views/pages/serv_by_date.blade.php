@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layout1')
 
 @section('seoTitle')
 All Services
@@ -59,7 +59,7 @@ All Services
                             <p class="card-text">{{ $date->description }}</p>
                         </div>
                         <div class="card-footer text-muted">
-                            <a href="#" class="btn btn-success">Order</a>
+                            <a href="#" class="btn btn-success add-cart">Order</a>
                         </div>
                     </div>
                 </div>

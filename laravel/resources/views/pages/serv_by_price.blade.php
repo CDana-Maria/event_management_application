@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layout1')
 
 @section('seoTitle')
     Sort By Price Services 
@@ -60,7 +60,7 @@
                                     <p class="card-text">{{ $price->description }}</p>
                                 </div>
                                 <div class="card-footer text-muted">
-                                    <a href="#" class="btn btn-success">Order</a>
+                                    <a href="#" class="btn btn-success add-cart">Order</a>
                                 </div>
                             </div>
                         </div>

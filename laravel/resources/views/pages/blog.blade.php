@@ -24,7 +24,7 @@ Blog Page
         <a href="/article/{{ $article->id }}">Read more</a>
         <small class="text-muted float-right">3 mins</small>
         <div>
-          <small class="text-muted float-left"> Tag: <a href="/tag/{{ $tag->id }}">{{ $tag->name}}</a></small>
+          <small class="text-muted float-left"> Tag: <a href="/tags/{{ $tag->id }}">{{ $tag->name}}</a></small>
         </div>
         <!-- <a href="{{ $article->path }}">Read more</a> -->
       </div>

@@ -14,8 +14,10 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
     integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    
 
-    @yield('headerScripts')
+
+    @yield('headerScripts')  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
   <style>
@@ -54,12 +56,12 @@
     
   </style>
 </head>
-<body>
- @include('header1')
-  <main>
-   @yield('content')
-  </main>
- @include('footer')
+<body> 
+   <main  role="main" id="app">
+      @include('header1')
+      @yield('content') 
+      @include('footer')
+    </main>
   <script>
     $(document).ready(function () {
       $('.customer-logos').slick({
@@ -105,6 +107,7 @@
       $data = curl_exec($ch);
       curl_close($ch);
       return json_decode($data, true);
+
     }
   </script>
     <script src="https://www.google.com/recaptcha/api.js"></script>
@@ -114,6 +117,10 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
     integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
     crossorigin="anonymous"></script>
+    <script src="{{ URL::asset('/js/main.js') }}"></script>
+    <script src="{{ URL::asset('/js/appp.js') }}"></script>
+    <!-- <script src="{{ mix('/js/appp.js') }}"></script> -->
+
 
     @yield('footerScripts')
 </body>

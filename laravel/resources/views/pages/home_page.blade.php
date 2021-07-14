@@ -125,7 +125,7 @@ Home Page
             <p class="card-text">{{ $article->description }}</p>
           </div>
           <div class="card-footer text-muted">
-            <a href="#" class="btn btn-success">Order</a>
+            <a href="#" class="btn btn-success add-cart">Order</a>
           </div>
         </div>
       </div>
@@ -166,9 +166,14 @@ Home Page
 <section class="section" id="recent">
   <div class="container-fluid">
     <h2 class="about-title featured-text text-center">Recent Products</h2>
+    <p>
+    <button  aria-label="Previous slide"><</button>
+    <button  aria-label="Next slide">></button>
+      
+			</p>
     <div class="row">
       @foreach ($latest as $recent )
-      <div class="col">
+      <div class="col product">
         <div class="card text-center" style="width: 18rem;">
           <div class="card-header">
           </div>
@@ -185,7 +190,7 @@ Home Page
             <p class="card-text">{{ $recent->description }}</p>
           </div>
           <div class="card-footer text-muted">
-            <a href="#" class="btn btn-success">Order</a>
+            <a href="#" class="btn btn-success add-cart">Order</a>
           </div>
         </div>
       </div>

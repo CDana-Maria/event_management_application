@@ -2,7 +2,7 @@
     <div class="container border-bottom">
       <div class="row align-items-center">
         <div class="col">
-          <a href="#">          
+          <a href="{!! url('/'); !!}">          
             <!-- <img src="../../images/logo_1.png" class="logo_f" alt="logo"> -->
             <img src="../images/logo_1.png" class="logo" alt="logo">
           </a>
@@ -11,7 +11,7 @@
           <h2 class="text-white">Menu</h2>
           <ul class="navbar-nav mr-auto ">
             <li class="nav-item effect">
-              <a class="nav-link  text-white" href='/blog'>Blog</a>
+              <a class="nav-link  text-white" href='/articles'>Blog</a>
             </li>
             <li class="nav-item effect">
               <a class="nav-link text-white" href="{!! url('/services/all'); !!}">Products</a>

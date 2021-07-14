@@ -51,15 +51,17 @@ All Services
                             <div class="col">
                                 <div class="d-flex mt-3 align-items-center">
                                     <a href="/services/{{ $all->id }}" class="text-dark">
-                                        <h5 class="card-title">{{ $all->name }}</h5>
+                                        <h5 class="card-title name">{{ $all->name }}</h5>
                                     </a>
                                     <h5 class="card-title price ml-auto">{{ $all->price }}$</h5>
                                 </div>
                             </div>
-                            <p class="card-text">{{ $all->description }}</p>
+                            <p class="card-text description">{{ $all->description }}</p>
                         </div>
-                        <div class="card-footer text-muted">
-                            <a href="#" class="btn btn-success">Order</a>
+                        <div class="card-footer text-muted" >
+                            <add-to-cart-button> </add-to-cart-button>    
+                             <!-- <a href="#" class="btn btn-success add-cart">Add to Cart</a> -->
+
                         </div>
                     </div>
                 </div>
