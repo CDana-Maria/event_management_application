@@ -82,32 +82,7 @@ export default {
         }
     },
     methods: {
-        sendOrder(e){
-            this.showAlert  = true;
-            e.preventDefault();
-            axios.post('/reservations', {
-                name: this.orderData.name,
-                email: this.orderData.email,
-                phone: parserInt(this.orderData.phone),
-                age: parserInt(this.orderData.age),
-                article_id: 7,
-                reservation_start: '2021-02-16 20:39:10',
-                reservation_end: '2021-02-16 20:39:10',
-                status: 'pedding',
-            })
-            .then((response) => {
-                this.output = {
-                    type: 'success',
-                    message: response.data
-                }
-            })
-            .catch((error) =>{
-                this.output = {
-                    type: 'danger',
-                    message: error.message
-                }
-            })
-        },
+        
         getOrderData(){
             let date = new Date().toJSON().slice(0, 19).replace('T', ' ');
             console.log(date);
