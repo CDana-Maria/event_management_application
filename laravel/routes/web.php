@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AllServicesController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\TagController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PopularController;
@@ -14,6 +15,9 @@ use App\Http\Controllers\ServByPriceController;
 use App\Http\Controllers\SingleServiceController;
 use App\Http\Middleware\RequestLoggerMiddleware;
 use App\Services\AbstractRequestLogger;
+use App\Http\Controllers\CheckoutController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -45,7 +49,9 @@ Route::get('categories/{id}', [CategoryController::class, 'index']);
 Route::post('/contact', \App\Http\Controllers\ContactFormController::class);
 
 
-
+Route::get('/welcome', function() {
+    return view('welcome');
+});
 // Route::get('/mailContactUs', function () {
 //     return view('contactUs');});
 
@@ -61,5 +67,16 @@ Route::get('/about', function () {
 });
 
 
+Route::get('/cart', [CartController::class,'getCart'])->name('checkout.cart');
+Route::get('/cart/item/{id}/remove', [CartController::class,'removeItem'])->name('checkout.cart.remove');
+Route::get('/cart/clear', [CartController::class,'clearCart'])->name('checkout.cart.clear');
 
 
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/checkout', [CheckoutController::class, 'getCheckout'])->name('checkout.index');
+    Route::post('/checkout/order', [CheckoutController::class, 'placeOrder'])->name('checkout.place.order');
+});
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

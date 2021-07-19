@@ -35,6 +35,7 @@
               <li class="nav-item effect">
                 <a class="nav-link" href="#sponsors">Sponsors</a>
               </li>
+              <Cart></Cart>
               <li class="nav-item effect">
                 <a class="nav-link" href="https://www.facebook.com" id="line" target="_blank">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-facebook"
@@ -66,5 +67,19 @@
           </div>
         </div>
       </div>
+      <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
+            @if (Route::has('login'))
+                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                    @auth
+                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Home</a>
+                    @else
+                        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
+
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
+                        @endif
+                    @endauth
+                </div>
+            @endif
     </nav>
   </header>

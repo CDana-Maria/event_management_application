@@ -5,19 +5,9 @@ Single Service
 @endsection
 
 @section('content')
-<style>
-  section {
-    padding: 200px 200px;
-    display: block;
-  }
 
-  .card-header,
-  .card-footer,
-  footer {
-    background: #3e6866;
-  }
-</style>
-<section>
+<section style="padding: 200px 200px;
+    display: block;">
   <div class="container">
     <div class="row">
     @foreach ($service->organizator as $org )
@@ -55,8 +45,12 @@ Single Service
         <h5>Organizator: {{ $org->name }}</h5>
 
         <div class="card-footer text-muted ">
-          <a href="#" class="btn btn-success add-cart cart1">Order</a>  
-          <a href="/services/all" class="btn btn-success align-items-right">Go Back</a>
+        <add-to-cart-button :product-id="{
+                                id: {{ $service->id }},
+                                name: '{{ $service->name }}',
+                                price: '{{$service->price }}'
+                            }"> </add-to-cart-button>    
+        <a href="/services/all" class="btn btn-success align-items-right">Go Back</a>
         </div>
       </div>
     </div>

@@ -1,5 +1,7 @@
 html {
     scroll-behavior: smooth;
+    padding: 200px 200px;
+    display: block;
   }
 /*-----Navbar-----*/
 #line {
@@ -59,10 +61,19 @@ html {
     padding: 20px 15px;
   }
 
-  .section {
+  .css {
     padding: 200px 200px;
     display: block;
-  }
+}
+
+.card-header,
+.card-footer {
+    background: #3e6866;
+}
+
+.menu {
+    float: right;
+}
 
 /*-----Carousel-----*/
 

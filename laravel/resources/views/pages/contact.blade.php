@@ -5,13 +5,8 @@
 @endsection
 
 @section('content')
-<style>
-section {
-      padding: 200px 200px;
-      display: block;
-    }
- </style>
-<section>
+<section style="padding: 200px 200px;
+      display: block;">
     <div class="container-fluid">
       <div class="row">
         <div class="col">

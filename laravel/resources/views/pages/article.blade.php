@@ -5,7 +5,8 @@
 @endsection
 
 @section('content')
-<section class="section" id="about">
+<section class="section" id="about" style="padding: 200px 200px;
+      display: block;">
      <h2 class="about-title featured-text text-center">{{ $articles ->title }}</h2>
             <div class="container-fluid">
                 <div class="row align-items-center">
@@ -16,7 +17,7 @@
                     </div>
                     <div class="col-lg-6 col-md-12 text-justify">
                        <p>{{ $articles->content }}</p>
-                       <a href="/blog">Go Back</a>
+                       <a href="/articles">Go Back</a>
                     </div>
                 </div>
             </div>

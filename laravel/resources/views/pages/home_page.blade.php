@@ -5,7 +5,6 @@ Home Page
 @endsection
 
 @section('content')
-<section>
   <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -44,8 +43,8 @@ Home Page
       <span class="sr-only">Next</span>
     </a>
   </div>
-</section>
-<section class="section" id="process">
+<section style =" padding: 200px 200px;
+      display: block;">
   <div class="container-fluid text-center">
     <h2 class="about-title featured-text text-center">The Process</h2>
     <div class="row">
@@ -103,7 +102,8 @@ Home Page
     </div>
   </div>
 </section>
-<section class="section" id="popular">
+<section class="section" id="popular" style =" padding: 200px 200px;
+      display: block;">
   <div class="container-fluid">
     <h2 class="about-title featured-text text-center">Popular Products</h2>
     <div class="row">
@@ -125,15 +125,19 @@ Home Page
             <p class="card-text">{{ $article->description }}</p>
           </div>
           <div class="card-footer text-muted">
-            <a href="#" class="btn btn-success add-cart">Order</a>
-          </div>
+ <add-to-cart-button :product-id="{
+                                id: {{ $article->id }},
+                                name: '{{ $article->name }}',
+                                price: '{{$article->price }}'
+                            }"> </add-to-cart-button>             </div>
         </div>
       </div>
       @endforeach
     </div>
   </div>
 </section>
-<section class="section" id="about">
+<section class="section" id="about" style =" padding: 200px 200px;
+      display: block;">
   <h2 class="about-title featured-text text-center">About Us</h2>
   <div class="container-fluid">
     <div class="row align-items-center">
@@ -163,14 +167,15 @@ Home Page
     </div>
   </div>
 </section>
-<section class="section" id="recent">
+<section class="section" id="recent" style =" padding: 200px 200px;
+      display: block;">
   <div class="container-fluid">
     <h2 class="about-title featured-text text-center">Recent Products</h2>
     <p>
     <button  aria-label="Previous slide"><</button>
     <button  aria-label="Next slide">></button>
       
-			</p>
+      </p>
     <div class="row">
       @foreach ($latest as $recent )
       <div class="col product">
@@ -190,8 +195,11 @@ Home Page
             <p class="card-text">{{ $recent->description }}</p>
           </div>
           <div class="card-footer text-muted">
-            <a href="#" class="btn btn-success add-cart">Order</a>
-          </div>
+ <add-to-cart-button :product-id="{
+                                id: {{ $recent->id }},
+                                name: '{{ $recent->name }}',
+                                price: '{{$recent->price }}'
+                            }"> </add-to-cart-button>             </div>
         </div>
       </div>
 
@@ -200,7 +208,8 @@ Home Page
     </div>
   </div>
 </section>
-<section class="section sec" id="contact">
+<section class="section sec" id="contact" style =" padding: 200px 200px;
+      display: block;">
   <h2 class="about-title featured-text text-center text-white">Contacts</h2>
   <div class="container-fluid">
     <div class="row">
@@ -219,19 +228,5 @@ Home Page
     </div>
   </div>
 </section>
-<section class="section" id="sponsors">
-  <div class="container">
-    <h2 class="about-title featured-text text-center">Sponsors</h2>
-    <div class="customer-logos slider">
-      <div class="slide"><img src="images/adidas.png" alt="sp"></div>
-      <div class="slide"><img src="images/facebook.png" alt="sp"></div>
-      <div class="slide"><img src="images/google.png" alt="sp"></div>
-      <div class="slide"><img src="images/instagram.png" alt="sp"></div>
-      <div class="slide"><img src="images/nike.png" alt="sp"></div>
-      <div class="slide"><img src="images/twitter.png" alt="sp"></div>
-      <div class="slide"><img src="images/uber.png" alt="sp"></div>
-      <div class="slide"><img src="images/youtube.png" alt="sp"></div>
-    </div>
-  </div>
-</section>
+
 @endsection

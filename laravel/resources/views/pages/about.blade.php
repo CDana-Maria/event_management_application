@@ -5,18 +5,8 @@
 @endsection
 
 @section('content')
-  <style>
-    section {
-      padding: 200px 200px;
-      display: block;
-    }
-    .card-header,
-    .card-footer,
-    footer {
-      background: #3e6866;
-    }
-  </style>
-    <section>
+    <section style="padding: 200px 200px;
+      display: block;">
       <div class="container">
         <div class="row">
           <div class="col">

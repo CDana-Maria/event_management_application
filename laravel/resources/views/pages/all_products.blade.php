@@ -5,25 +5,10 @@ All Services
 @endsection
 
 @section('content')
-<style>
-    section {
-        padding: 200px 200px;
-        display: block;
-    }
-
-    .card-header,
-    .card-footer {
-        background: #3e6866;
-    }
-
-    .menu {
-        float: right;
-    }
-</style>
-<section>
-    <h2 class="about-title featured-text text-center">Our Products</h2>
+<section style="padding: 200px 200px;display: block; ">
+    <h2 class="about-title featured-text text-center" >Our Products<home></home></h2>
     <div class="container mb-3">
-        <div class="row menu">
+        <div class="row menu" style="float:right">
             <!-- Example split danger button -->
             <div class="btn-group ">
                 <button type="button" class="btn btn-info">Sort By</button>
@@ -59,7 +44,14 @@ All Services
                             <p class="card-text description">{{ $all->description }}</p>
                         </div>
                         <div class="card-footer text-muted" >
-                            <add-to-cart-button> </add-to-cart-button>    
+
+                            <add-to-cart-button :product-id="{
+                                id: {{ $all->id }},
+                                name: '{{ $all->name }}',
+                                price: '{{$all->price }}'
+                            }"> </add-to-cart-button>   
+
+
                              <!-- <a href="#" class="btn btn-success add-cart">Add to Cart</a> -->
 
                         </div>

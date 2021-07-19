@@ -26,6 +26,8 @@ class AppServiceProvider extends ServiceProvider
         // });           
          $this->app->bind(RequestLoggerInterface::class, PathRequestLogger::class);
          $this->app->bind(RequestLoggerInterface::class, DetailsRequestLogger::class);
+         // $this->register(RepsitorySeviceProvider::class);
+         // $this->app->bind(\App\Contracts\OrderContract::class, App\Repositories\ClassImplementingOrderContract::class);
 
     }
 

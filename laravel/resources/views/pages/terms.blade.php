@@ -6,13 +6,9 @@
 
 @section('content')
  
-  <style>
-    section {
-      padding: 200px 200px;
-      display: block;
-    }
   </style>
-    <section>
+    <section style="padding: 200px 200px;
+      display: block;">
       <h2 class="about-title featured-text text-center">Terms and Conditions</h2>
       <p class="text-justify">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos placeat voluptatem deserunt corrupti expedita

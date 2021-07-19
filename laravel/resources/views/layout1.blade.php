@@ -9,8 +9,9 @@
   <title>@yield('seoTitle', 'My Project')</title>
 
   
-  <!-- <link href="{{ URL::asset('/css/myproject/appp.css') }}" rel="stylesheet"> -->
-  <link href="/css/myproject/appp.css" rel="stylesheet">
+  <link href="{{ mix('/css/appp.css') }}" rel="stylesheet">
+    <!-- <link href="/css/myproject/appp.css" rel="stylesheet"> -->
+
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
     integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
@@ -53,7 +54,6 @@
         padding: 0;
       }
     }
-    
   </style>
 </head>
 <body> 
@@ -62,6 +62,7 @@
       @yield('content') 
       @include('footer')
     </main>
+  
   <script>
     $(document).ready(function () {
       $('.customer-logos').slick({
@@ -117,10 +118,12 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
     integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
     crossorigin="anonymous"></script>
-    <script src="{{ URL::asset('/js/main.js') }}"></script>
-    <script src="{{ URL::asset('/js/appp.js') }}"></script>
-    <!-- <script src="{{ mix('/js/appp.js') }}"></script> -->
+    <!-- <script src="{{ URL::asset('/js/main.js') }}"></script> -->
+    <!-- <script src="{{ URL::asset('/js/app.js') }}"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="{{ mix('/js/app.js') }}"></script>
 
+    <!-- <script src="{{ asset('/js/app.js') }}"></script> -->
 
     @yield('footerScripts')
 </body>

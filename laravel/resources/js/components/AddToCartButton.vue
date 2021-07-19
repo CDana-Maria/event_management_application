@@ -1,21 +1,34 @@
 <template>
-    <button type="button" class="btn btn-primary" @click="addToCart">
-      Add To Cart
-  </button>
+
+    <div>
+        <button
+             @click="addToCart"
+            :disabled="isProductAdded()"
+            class="btn btn-success m-auto">
+            {{ isProductAdded() ? 'Added to cart' : 'Add to cart' }}
+        </button>
+    </div>
 </template>
-
 <script>
-export default {
-    name: "AddToCartButton",
 
+export default {
+    name: 'AddToCart',
+    props: ['productId'],
     methods: {
-        addToCart() {
-            alert ('addToCart')
+        addToCart(){
+            this.$root.addToCart(this.productId);
+        },
+         isProductAdded(){
+            return this.$root.isProductAdded(this.productId.id);
         }
+       
     }
-    
 }
 </script>
+
+
+
+
 
 <style scoped>
 

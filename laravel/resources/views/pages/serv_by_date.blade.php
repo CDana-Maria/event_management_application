@@ -5,25 +5,12 @@ All Services
 @endsection
 
 @section('content')
-<style>
-    section {
-        padding: 200px 200px;
-        display: block;
-    }
 
-    .card-header,
-    .card-footer {
-        background: #3e6866;
-    }
-
-    .menu {
-        float: right;
-    }
-</style>
-<section>
+<section style="padding: 200px 200px;
+        display: block;">
     <h2 class="about-title featured-text text-center">Our Products</h2>
     <div class="container mb-3">
-        <div class="row menu">
+        <div class="row menu" style="float: right;">
             <!-- Example split danger button -->
             <div class="btn-group ">
                 <button type="button" class="btn btn-info">Sort By</button>
@@ -41,6 +28,7 @@ All Services
     <div class="container-fluid mt-5">
         <div class="col-12">
             <div class="row mt-5">
+
                 @foreach ($date as $date )
                 <div class="col">
                     <div class="card text-center" style="width: 18rem;">
@@ -50,7 +38,7 @@ All Services
                         <div class="card-body">
                             <div class="col">
                                 <div class="d-flex mt-3 align-items-center">
-                                    <a href="product_detail.html" class="text-dark">
+                                    <a href="/services/{{ $date->id }}" class="text-dark">
                                         <h5 class="card-title">{{ $date->name }} </h5>
                                     </a>
                                     <h5 class="card-title price ml-auto">{{ $date->price }}$</h5>
@@ -59,8 +47,11 @@ All Services
                             <p class="card-text">{{ $date->description }}</p>
                         </div>
                         <div class="card-footer text-muted">
-                            <a href="#" class="btn btn-success add-cart">Order</a>
-                        </div>
+                        <add-to-cart-button :product-id="{
+                                id: {{ $date->id }},
+                                name: '{{ $date->name }}',
+                                price: '{{$date->price }}'
+                            }"> </add-to-cart-button>                            </div>
                     </div>
                 </div>
                 @endforeach
