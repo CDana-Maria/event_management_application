@@ -64,6 +64,7 @@ return array(
     'App\\Providers\\EventServiceProvider' => $baseDir . '/app/Providers/EventServiceProvider.php',
     'App\\Providers\\RepositoryServiceProvider' => $baseDir . '/app/Providers/RepositoryServiceProvider.php',
     'App\\Providers\\RouteServiceProvider' => $baseDir . '/app/Providers/RouteServiceProvider.php',
+    'App\\Providers\\ViewComposerServiceProvider' => $baseDir . '/app/Providers/ViewComposerServiceProvider.php',
     'App\\Repositories\\BaseRepository' => $baseDir . '/app/Repositories/BaseRepository.php',
     'App\\Repositories\\OrderRepository' => $baseDir . '/app/Repositories/OrderRepository.php',
     'App\\Services\\AbstractRequestLogger' => $baseDir . '/app/Services/AbstractRequestLogger.php',

@@ -66,26 +66,7 @@
                             </article>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="card">
-                                    <header class="card-header">
-                                        <h4 class="card-title mt-2 text-light">Your Order</h4>
-                                    </header>
-                                    <article class="card-body">
-                                        <dl class="dlist-align">
-                                            <dt>Total cost: </dt>
-                                            <dd class="text-right h5 b"> {{ config('settings.currency_symbol') }}{{ \Cart::getSubTotal() }} </dd>
-                                        </dl>
-                                    </article>
-                                </div>
-                            </div>
-                            <div class="col-md-12 mt-4">
-                                <button type="submit" class="subscribe btn btn-success btn-lg btn-block">Place Order</button>
-                            </div>
-                        </div>
-                    </div>
+                    <form-checkout/>
                 </div>
             </form>
         </div>

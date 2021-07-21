@@ -171,11 +171,7 @@ Home Page
       display: block;">
   <div class="container-fluid">
     <h2 class="about-title featured-text text-center">Recent Products</h2>
-    <p>
-    <button  aria-label="Previous slide"><</button>
-    <button  aria-label="Next slide">></button>
-      
-      </p>
+    
     <div class="row">
       @foreach ($latest as $recent )
       <div class="col product">

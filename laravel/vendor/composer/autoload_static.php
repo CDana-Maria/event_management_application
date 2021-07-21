@@ -598,6 +598,7 @@ class ComposerStaticInitaf0d2b7d151fc9f32013b35b7f443cfe
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RepositoryServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RepositoryServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
+        'App\\Providers\\ViewComposerServiceProvider' => __DIR__ . '/../..' . '/app/Providers/ViewComposerServiceProvider.php',
         'App\\Repositories\\BaseRepository' => __DIR__ . '/../..' . '/app/Repositories/BaseRepository.php',
         'App\\Repositories\\OrderRepository' => __DIR__ . '/../..' . '/app/Repositories/OrderRepository.php',
         'App\\Services\\AbstractRequestLogger' => __DIR__ . '/../..' . '/app/Services/AbstractRequestLogger.php',

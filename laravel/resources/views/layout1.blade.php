@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
   <meta name="description" content="@yield('seoDescription', 'Blog and Blog')">
   <meta name="author" content="Dana-Maria Cozaru">
   <title>@yield('seoTitle', 'My Project')</title>
@@ -110,6 +110,15 @@
       return json_decode($data, true);
 
     }
+
+    $res = post_captcha($_POST['g-recaptcha-response']);
+    if(!$res['success']) {
+      echo '<p> Not checked</p> <br>';
+    }
+    else {
+      echo '<br> <p>Completed </p> <br>';
+    }
+    
   </script>
     <script src="https://www.google.com/recaptcha/api.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"

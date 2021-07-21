@@ -2,7 +2,7 @@
 
     <div>
         <button
-             @click="addToCart"
+             @click="addToCart()"
             :disabled="isProductAdded()"
             class="btn btn-success m-auto">
             {{ isProductAdded() ? 'Added to cart' : 'Add to cart' }}

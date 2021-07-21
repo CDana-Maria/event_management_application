@@ -11,6 +11,8 @@ import Alert from "./components/Alert.vue";
 import AddToCartButton from "./components/AddToCartButton.vue";
 import Cart from "./components/Cart.vue";
 import Checkout from "./components/Checkout.vue";
+import FormCheckout from "./components/FormCheckout.vue";
+import Navbar from "./components/Navbar.vue";
 
 require('./bootstrap');
 
@@ -31,6 +33,8 @@ Vue.component('alert', Alert);
 Vue.component('add-to-cart-button', AddToCartButton);
 Vue.component('Cart', Cart);
 Vue.component('checkout', Checkout);
+Vue.component('form-checkout', FormCheckout);
+Vue.component('navbar', Navbar);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -50,12 +54,15 @@ Vue.component('checkout', Checkout);
         addToCart(productId){
             if(!this.isProductAdded(productId)){
                 this.cart.push(productId);
-                localStorage.setItem('productToCart', JSON.stringify(this.cart));
+                localStorage.setItem('cart', JSON.stringify(this.cart));
             }
         },
         isProductAdded(productId) {
             const productIndex = this.cart.some(product => product.id === productId);
             return productIndex;
         }
+    },
+    mounted: {
+
     }
 });
